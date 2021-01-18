@@ -1,8 +1,8 @@
 spring:
   datasource:
     username: root
-    password: xxxx
-    url: jdbc:mysql://xxxxxx:3306/miaosha?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false
+    password: 890828
+    url: jdbc:mysql://101.132.154.224:3306/miaosha?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.jdbc.Driver
   thymeleaf:
@@ -20,7 +20,8 @@ spring:
     database: 0
     timeout: 0
     port: 6379
-    host: 127.0.0.1
+    host: 101.132.154.224
+    password: 890828
     jedis:
       pool:
         max-active: 8
