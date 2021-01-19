@@ -18,6 +18,8 @@ public class RedisConfig {
     private String host;
     @Value("${spring.redis.port}")
     private int port;
+    @Value("${spring.redis.password}")
+    private String password;
     @Value("${spring.redis.timeout}")
     private int timeout;//秒
     @Value("${spring.redis.jedis.pool.max-idle}")
@@ -34,7 +36,7 @@ public class RedisConfig {
         jedisPoolConfig.setMaxWaitMillis(1000);
         // 是否启用pool的jmx管理功能, 默认true
         jedisPoolConfig.setJmxEnabled(true);
-        JedisPool jedisPool = new JedisPool(jedisPoolConfig, host, port, timeout);
+        JedisPool jedisPool = new JedisPool(jedisPoolConfig, host, port, timeout,password);
         return jedisPool;
     }
 }

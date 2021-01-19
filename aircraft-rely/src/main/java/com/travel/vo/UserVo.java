@@ -3,13 +3,15 @@ package com.travel.vo;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.io.Serializable;
+
 /**
  * @author qiurunze
  * users表所对应的实体类
  */
 @Setter
 @Getter
-public class UserVo {
+public class UserVo implements Serializable {
 
     //实体类的属性和表的字段名称一一对应
     private int id;

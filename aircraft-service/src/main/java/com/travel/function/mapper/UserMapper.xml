@@ -16,6 +16,9 @@ userMapper(userMapper.xml文件去除后缀)保证唯一性
     <sql id="base_column">
         id,name,age,_address
   </sql>
+
+    <cache type="com.travel.function.config.RedisCache"/>
+
     <!-- 查询-->
     <select id="getUser" parameterType="int"
             resultType="com.travel.function.entity.User">
