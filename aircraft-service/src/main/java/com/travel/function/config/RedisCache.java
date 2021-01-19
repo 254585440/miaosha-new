@@ -47,7 +47,8 @@ public class RedisCache implements Cache {
 
     @Override
     public int getSize() {
-        return 0;
+        getRedisTemplate();
+        return redisTemplate.opsForHash().size(id).intValue();
     }
 
     @Override
